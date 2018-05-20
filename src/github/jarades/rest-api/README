@@ -1,0 +1,9 @@
+Este é um simples exemplo de uma API usango GO.
+
+O modelo é uma verção modificada do exemplo disponível no link abaixo:
+
+<https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo>
+
+É preciso executar o comando abaixo no terminal antes de compilar e executar o programa (apenas na primeira vez).
+
+go get github.com/gorilla/mux
