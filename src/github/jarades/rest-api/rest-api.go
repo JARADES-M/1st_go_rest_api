@@ -6,6 +6,7 @@ import (
     "github.com/gorilla/mux"
     "log"
     "net/http"
+    "io/ioutil"
 )
 
 // The person Type (more like an object)
@@ -23,7 +24,12 @@ type Address struct {
 var people []Person
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello World")
+    stream, err := ioutil.ReadFile("home.html")
+    if err != nil {
+        log.Fatal(err)
+    }
+    htmlfile := string(stream)
+    fmt.Fprintf(w, htmlfile)
 }
 
 // Display all from the people var
